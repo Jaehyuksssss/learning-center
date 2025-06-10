@@ -1,16 +1,6 @@
 import React, {useLayoutEffect} from 'react';
-import styled from 'styled-components/native';
-
-const Container = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Title = styled.Text`
-  font-size: 24px;
-  font-weight: bold;
-`;
+import CenteredScreen from '../../components/atoms/CenteredScreen';
+import SectionTitle from '../../components/atoms/SectionTitle';
 
 const AccountScreen = ({navigation, headerTitle}: any) => {
   useLayoutEffect(() => {
@@ -20,9 +10,9 @@ const AccountScreen = ({navigation, headerTitle}: any) => {
   }, [navigation, headerTitle]);
 
   return (
-    <Container>
-      <Title>내 계정</Title>
-    </Container>
+    <CenteredScreen>
+      <SectionTitle>내 계정</SectionTitle>
+    </CenteredScreen>
   );
 };
 

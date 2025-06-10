@@ -8,8 +8,6 @@ const HeaderContainer = styled.View`
   padding-bottom: 12px;
   padding-left: 20px;
   border-bottom-width: 0px;
-  /* 그림자 효과 */
-  shadow-color: #000;
   shadow-offset: 0px 2px;
   shadow-opacity: 0.06;
   shadow-radius: 4px;
@@ -22,10 +20,15 @@ const Title = styled.Text`
   color: #111;
 `;
 
-const EducationHeader = () => (
+type AppbarHeaderProps = {
+  title: string;
+  type: string;
+};
+
+const AppbarHeader = ({title, type}: AppbarHeaderProps) => (
   <HeaderContainer>
-    <Title>교육</Title>
+    <Title>{title}</Title>
   </HeaderContainer>
 );
 
-export default EducationHeader;
+export default AppbarHeader;

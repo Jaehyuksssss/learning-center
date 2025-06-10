@@ -27,8 +27,8 @@ const Label = styled.Text<{$isActive: boolean}>`
 `;
 
 const BottomTabBar: React.FC<BottomTabBarProps> = props => {
-  console.log('BottomTabBar props:', props);
   const {state, descriptors, navigation} = props;
+
   return (
     <Container>
       {state.routes.map((route, index) => {
@@ -36,11 +36,11 @@ const BottomTabBar: React.FC<BottomTabBarProps> = props => {
         let label = options.tabBarLabel ?? options.title ?? route.name;
         const isFocused = state.index === index;
         const onPress = () => {
-          console.log('Tab pressed:', route.name);
           if (!isFocused) {
             navigation.navigate(route.name);
           }
         };
+
         let labelNode: React.ReactNode;
         if (typeof label === 'function') {
           labelNode = label({

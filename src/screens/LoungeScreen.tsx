@@ -1,16 +1,6 @@
 import React, {useLayoutEffect} from 'react';
-import styled from 'styled-components/native';
-
-const Container = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Title = styled.Text`
-  font-size: 24px;
-  font-weight: bold;
-`;
+import CenteredScreen from '../../components/atoms/CenteredScreen';
+import SectionTitle from '../../components/atoms/SectionTitle';
 
 const LoungeScreen = ({navigation, headerTitle}: any) => {
   useLayoutEffect(() => {
@@ -20,9 +10,9 @@ const LoungeScreen = ({navigation, headerTitle}: any) => {
   }, [navigation, headerTitle]);
 
   return (
-    <Container>
-      <Title>라운지</Title>
-    </Container>
+    <CenteredScreen>
+      <SectionTitle>라운지</SectionTitle>
+    </CenteredScreen>
   );
 };
 
